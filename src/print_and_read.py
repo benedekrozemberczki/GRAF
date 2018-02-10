@@ -4,11 +4,17 @@ from texttable import Texttable
 import json
 
 def graph_reader(input_path):
+    """
+    Function to read a csv edge list and transform it to a networkx graph object.
+    """
     edges = pd.read_csv(input_path)
     graph = nx.from_edgelist(edges.values.tolist())
     return graph
 
 def log_setup(args_in):
+    """
+    Function to setup the logging hash table.
+    """
     log = dict()
     log["times"] = []
     log["losses"] = []
@@ -17,10 +23,16 @@ def log_setup(args_in):
     return log
 
 def json_dumper(data, path):
+    """
+    Function to dump the logs and assignments.
+    """
     with open(path, 'w') as outfile:
         json.dump(data, outfile)
 
 def initiate_dump(log, assignments, args, final_embeddings):
+    """
+    Function to dump the logs and assignments. If the matrix saving boolean is true the embedding is also saved.
+    """
     json_dumper(log, args.log_output)
     json_dumper(assignments, args.assignment_output)
     if args.dump_matrices:
@@ -28,6 +40,9 @@ def initiate_dump(log, assignments, args, final_embeddings):
         final_embeddings.to_csv(args.embedding_output, index = None)
 
 def tab_printer(log):
+    """
+    Function to print the logs in a nice tabular format.
+    """
     t = Texttable() 
     t.add_rows([['Epoch', log["losses"][-1][0]]])
     print t.draw()
@@ -40,11 +55,17 @@ def tab_printer(log):
     print t.draw()  
 
 def epoch_printer(repetition):
+    """
+    Function to print the epoch number.
+    """
     print("")
     print("Epoch " + str(repetition+1) + ". initiated.")
     print("")
 
 def log_updater(log, repetition, average_loss, optimization_time, modularity_score):
+    """ 
+    Function to update the log object.
+    """
     index = repetition + 1
     log["losses"] = log["losses"] + [[index, average_loss]]
     log["times"] = log["times"] + [[index, optimization_time]]
