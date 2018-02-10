@@ -40,6 +40,7 @@ def min_norm(g, node_1, node_2):
 
 def overlap_generator(metric, graph):
     """
+    Function to generate weight for all of the edges.
     """
     edges = nx.edges(graph)
     edges = edges + map(lambda x: (x[1], x[0]), edges)
@@ -47,6 +48,7 @@ def overlap_generator(metric, graph):
 
 def classical_modularity_calculator(graph, embedding, args):
     """
+    Function to calculate the cluster centers and assignments.
     """
     kmeans = KMeans(n_clusters=args.cluster_number, random_state=0, n_init=1).fit(embedding)
     assignments = {i: int(kmeans.labels_[i]) for i in range(0, embedding.shape[0])}
