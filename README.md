@@ -42,7 +42,7 @@ The models are defined in a way that parameter settings and cluster quality is l
 
 ### Options
 
-Learning of the embedding is handled by the `src/embedding_clustering.py` script which provides the following command line arguments.
+Learning of the embedding is handled by the `src/factorizer.py` script which provides the following command line arguments.
 
 #### Input and output options
 
