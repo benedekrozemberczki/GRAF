@@ -4,7 +4,7 @@ def parameter_parser():
 
     """
     A method to parse up command line parameters. By default it gives an embedding of the Facebook politicians network.
-    The default hyperparameters give a good quality representation and good candidate cluster means without grid search.
+    The default hyperparameters give a good quality representation and good cluster centers without grid search.
     """
 
     parser = argparse.ArgumentParser(description = "Run Factor.")
