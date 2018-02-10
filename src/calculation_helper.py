@@ -34,5 +34,3 @@ def classical_modularity_calculator(graph, embedding, args):
     assignments = {i: int(kmeans.labels_[i]) for i in range(0, embedding.shape[0])}
     modularity = community.modularity(assignments,graph)
     return modularity, assignments
-
-     
