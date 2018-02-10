@@ -27,7 +27,6 @@ def initiate_dump(log, assignments, args, final_embeddings):
         final_embeddings = pd.DataFrame(final_embeddings)
         final_embeddings.to_csv(args.embedding_output, index = None)
 
-
 def tab_printer(log):
     t = Texttable() 
     t.add_rows([['Epoch', log["losses"][-1][0]]])
