@@ -97,8 +97,8 @@ python src/factorizer.py --dimensions 128 --cluster-number 10
 
 If you find GRAF useful in your research, please consider citing the following paper:
 
->@misc{rozemberczki2018GEMSEC,
-  author={Benedek Rozemberczki and Ryan Davies and Rik Sarkar and Charles Sutton},
-  title={GEMSEC: Graph Embedding with Self Clustering},
-  year={2018},
+>@misc{rozemberczki2018GEMSEC,    
+  author={Benedek Rozemberczki and Ryan Davies and Rik Sarkar and Charles Sutton},    
+  title={GEMSEC: Graph Embedding with Self Clustering},   
+  year={2018},    
   eprint={arXiv:1802.03997}}
