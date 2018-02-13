@@ -7,8 +7,8 @@ GRAF is a graph embedding algorithm which learns a clustering based on features 
 This repository provides a reference implementation for GRAF as it is used as a benchmark in the paper:
 > GEMSEC: Graph Embedding with Self Clustering.
 > [Benedek Rozemberczki](http://homepages.inf.ed.ac.uk/s1668259/), [Ryan Davies](https://www.inf.ed.ac.uk/people/students/Ryan_Davies.html), [Rik Sarkar](https://homepages.inf.ed.ac.uk/rsarkar/) and [Charles Sutton](http://homepages.inf.ed.ac.uk/csutton/) .
-> International Conference on Complex Networks, 2018.
-> http://homepages.inf.ed.ac.uk/s1668259/papers/gemsec.pdf
+> arXiv, 2018.
+>https://arxiv.org/abs/1802.03997
 
 
 ### Requirements
