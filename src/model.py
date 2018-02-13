@@ -155,7 +155,7 @@ class Factor(Model):
                 self.average_loss = self.average_loss/self.vocab_size
                 self.embedding_out = self.embedding_matrix.eval()
                 self.modularity_score, assignments = classical_modularity_calculator(self.graph, self.embedding_out, self.args)
-                self.log = log_updater(self.log, i, self.average_loss, self.optimization_time, self.modularity_score)
+                self.log = log_updater(self.log, repetition, self.average_loss, self.optimization_time, self.modularity_score)
                 tab_printer(self.log)
 
         initiate_dump(self.log, assignments, self.args, self.embedding_out)
