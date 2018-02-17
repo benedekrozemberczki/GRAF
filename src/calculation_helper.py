@@ -33,7 +33,7 @@ def min_norm(g, node_1, node_2):
     """
     Function to calculate the minimum normalized neighborhood overlap.
     """
-    inter = len(set(nx.neighbors(g, node_1)).intersection(set(nx.neighbors(g, node_2))))
+    inter = len(set(nx.neighbors(g, node_1)).intersection(set(nx.neighbors(g, node_2)))) + 1
     min_norm = min(len(set(nx.neighbors(g, node_1))), len(set(nx.neighbors(g, node_2))))
     min_overlap = float(inter) / float(min_norm)
     return min_overlap
