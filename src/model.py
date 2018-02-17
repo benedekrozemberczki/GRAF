@@ -112,9 +112,6 @@ class Factor(Model):
         Method to generate left and right handside matrices, proper time index and overlap vector.
         """
 
-        reverse_edges = {b: random.random() for a, b in edges}
-        edges.sort(key=lambda item: reverse_edges[item[1]])
-        
         left_nodes = np.array(map(lambda x: x[0], edges))
         right_nodes = np.array(map(lambda x: x[1], edges))
         overlaps = np.array(map(lambda x: self.weights[(x[0], x[1])], edges))
