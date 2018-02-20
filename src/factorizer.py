@@ -4,7 +4,7 @@ from model import Factor
 
 def create_and_run_model(args):
     """
-    Function to read the graph, create and embedding and train it.
+    Function to read the graph, create an embedding and train it.
     """
     graph = graph_reader(args.input)
     model = Factor(args, graph)
