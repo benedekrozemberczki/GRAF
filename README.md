@@ -59,6 +59,7 @@ Learning of the embedding is handled by the `src/factorizer.py` script which pro
 #### Model options
 
 ```
+  --epochs INT
   --batch-size INT
   --target-weighting STR
   --regularization-weighting STR  
@@ -69,6 +70,7 @@ Learning of the embedding is handled by the `src/factorizer.py` script which pro
   --lambd FLOAR                   Weight regularization penalty.                      Default is 0.01.
   --cluster-number INT            Number of clusters.                                 Default is 20.
   --initial-gamma FLOAT
+  --regularization-noise
 ```
 
 ### Examples
