@@ -65,7 +65,7 @@ def parameter_parser():
     parser.add_argument('--epochs',
                         type = int,
                         default = 10,
-	                help = 'Number of dimensions. Default is 16.')
+	                help = 'Number of epochs. Default is 10.')
 
     parser.add_argument('--initial-learning-rate',
                         type = float,
