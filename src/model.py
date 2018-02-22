@@ -10,7 +10,7 @@ from tqdm import tqdm
 
 from layers import Factorization, Clustering, Regularization
 
-from calculation_helper import gamma_incrementer, index_generation, batch_input_generator, batch_label_generator
+from calculation_helper import gamma_incrementer
 from calculation_helper import overlap_generator
 from calculation_helper import neural_modularity_calculator, classical_modularity_calculator
 from print_and_read import json_dumper, log_setup, initiate_dump_graf, initiate_dump_grafcode, tab_printer, epoch_printer, log_updater
@@ -56,7 +56,7 @@ class Model(object):
         
 class GRAFCODEWithRegularization(Model):
     """
-    Regularized GEMSEC class.
+    Regularized GRAFCODE class.
     """
     def build(self):
         """
@@ -153,7 +153,7 @@ class GRAFCODEWithRegularization(Model):
 
 class GRAFCODE(GRAFCODEWithRegularization):
     """
-    Regularized GEMSEC class.
+    GRAFCODE class.
     """
     def build(self):
         """
@@ -204,7 +204,7 @@ class GRAFCODE(GRAFCODEWithRegularization):
 
 class GRAFWithRegularization(GRAFCODEWithRegularization):
     """
-    Regularized GEMSEC class.
+    Regularized GRAF class.
     """
     def build(self):
         """
@@ -257,7 +257,7 @@ class GRAFWithRegularization(GRAFCODEWithRegularization):
 
 class GRAF(GRAFWithRegularization):
     """
-    Regularized GEMSEC class.
+    GRAF class.
     """
     def build(self):
         """
@@ -288,7 +288,6 @@ class GRAF(GRAFWithRegularization):
         self.weights = overlap_generator(self.args, self.graph)
 
     def feed_dict_generator(self, edges, step, gamma):
-        
         """
         Method to generate left and right handside matrices, proper time index and overlap vector.
         """
