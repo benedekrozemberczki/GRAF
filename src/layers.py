@@ -29,7 +29,6 @@ class Factorization:
         """
         Calculating the predictive loss.
         """
-
         self.embedding_left = tf.nn.embedding_lookup(self.embedding_matrix, self.edge_indices_left, max_norm=1) 
         self.embedding_right = tf.nn.embedding_lookup(self.embedding_matrix, self.edge_indices_right, max_norm=1) 
         self.bias = tf.nn.embedding_lookup(self.embedding_bias, self.edge_indices_left, max_norm=1)
