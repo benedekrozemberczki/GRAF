@@ -4,7 +4,7 @@ import numpy as np
 
 class Factorization:
     """
-    DeepWalk embedding layer class.
+    Factorization layer class.
     """
     def __init__(self, args, vocab_size):
         """
@@ -27,18 +27,13 @@ class Factorization:
 
     def __call__(self):
         """
-        Calculating the embedding cost with NCE and returning it.
+        Calculating the predictive loss.
         """
 
         self.embedding_left = tf.nn.embedding_lookup(self.embedding_matrix, self.edge_indices_left, max_norm=1) 
         self.embedding_right = tf.nn.embedding_lookup(self.embedding_matrix, self.edge_indices_right, max_norm=1) 
-    
         self.bias = tf.nn.embedding_lookup(self.embedding_bias, self.edge_indices_left, max_norm=1)
-
         self.embedding_predictions = tf.reduce_sum(tf.multiply(self.embedding_left,self.embedding_right), axis=1) + self.bias
-            
-
-    
         return tf.reduce_mean(tf.square(tf.subtract(self.target,self.embedding_predictions)))
 
 class Clustering:
@@ -56,7 +51,6 @@ class Clustering:
         """
         Calculating the clustering cost.
         """
-           
         self.clustering_differences = tf.expand_dims(tf.concat([Factorizer.embedding_left,Factorizer.embedding_right],0),1) - self.cluster_means
         self.cluster_distances = tf.norm(self.clustering_differences, ord = 2, axis = 2)
         self.to_be_averaged = tf.reduce_min(self.cluster_distances, axis = 1)
