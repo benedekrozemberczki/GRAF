@@ -7,7 +7,7 @@ def parameter_parser():
     The default hyperparameters give a good quality representation and good candidate cluster means without grid search.
     """
 
-    parser = argparse.ArgumentParser(description = "Run GEMSEC.")
+    parser = argparse.ArgumentParser(description = "Run GRAFCODE.")
 
     #------------------------------------------------------------------
     # Input and output file parameters.
@@ -60,7 +60,7 @@ def parameter_parser():
     parser.add_argument('--batch-size',
                         type = int,
                         default = 128,
-	                help = 'Number of dimensions. Default is 16.')
+	                help = 'Number of edges in batch. Default is 128.')
 
     parser.add_argument('--epochs',
                         type = int,
@@ -69,13 +69,13 @@ def parameter_parser():
 
     parser.add_argument('--initial-learning-rate',
                         type = float,
-                        default = 0.005,
-	                help = 'Initial learning rate. Default is 0.01.')
+                        default = 0.001,
+	                help = 'Initial learning rate. Default is 0.001.')
 
     parser.add_argument('--minimal-learning-rate',
                         type = float,
-                        default = 0.001,
-	                help = 'Minimal learning rate. Default is 0.001.')
+                        default = 0.0001,
+	                help = 'Minimal learning rate. Default is 0.0001.')
 
     parser.add_argument('--annealing-factor',
                         type = float,
@@ -84,7 +84,7 @@ def parameter_parser():
 
     parser.add_argument('--initial-gamma',
                         type = float,
-                        default = 0.2,
+                        default = 0.1,
 	                help = 'Initial clustering weight. Default is 0.1.')
 
     parser.add_argument('--lambd',
@@ -100,12 +100,12 @@ def parameter_parser():
     parser.add_argument('--target-weighting',
                         nargs = '?',
                         default = 'overlap',
-	                help = 'Weight construction technique for regularization.')
+	                help = 'Factor target weighting.')
 
     parser.add_argument('--regularization-weighting',
                         nargs = '?',
                         default = 'normalized_overlap',
-	                help = 'Weight construction technique for regularization.')
+	                help = 'Regularization weighting strategy.')
 
     parser.add_argument('--regularization-noise',
                         type = float,
