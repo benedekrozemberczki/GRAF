@@ -69,12 +69,12 @@ def parameter_parser():
 
     parser.add_argument('--initial-learning-rate',
                         type = float,
-                        default = 0.001,
+                        default = 0.01,
 	                help = 'Initial learning rate. Default is 0.001.')
 
     parser.add_argument('--minimal-learning-rate',
                         type = float,
-                        default = 0.0001,
+                        default = 0.001,
 	                help = 'Minimal learning rate. Default is 0.0001.')
 
     parser.add_argument('--annealing-factor',
