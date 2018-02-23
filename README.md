@@ -70,7 +70,7 @@ Learning of the embedding is handled by the `src/factorizer.py` script which pro
   --lambd FLOAR                   Weight regularization penalty.                      Default is 2**-4.
   --cluster-number INT            Number of clusters.                                 Default is 20.
   --initial-gamma FLOAT           Initial clustering cost weight.                     Default is 0.1.
-  --regularization-noise FLOAT    Gradient noise.                                     Default is  10**-8.
+  --regularization-noise FLOAT    Gradient noise.                                     Default is 10**-8.
 ```
 
 ### Examples
