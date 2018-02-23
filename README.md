@@ -61,16 +61,16 @@ Learning of the embedding is handled by the `src/factorizer.py` script which pro
 ```
   --epochs INT                    Number of epochs.                                   Default is 10.
   --batch-size INT                Number of edges in batch.                           Default is 128.
-  --target-weighting STR          Target edge weight strategy.                        Default is `normalized_overlap`.
+  --target-weighting STR          Target edge weight strategy.                        Default is `overlap`.
   --regularization-weighting STR  Regularization weighing strategy.                   Default is `normalized_overlap`.
-  --dimensions INT                Number of dimensions.                               Default is 32.
-  --initial-learning-rate FLOAT   Initial learning rate.                              Default is 0.001.
-  --minimal-learning-rate FLOAT   Final learning rate.                                Default is 0.00001.
+  --dimensions INT                Number of dimensions.                               Default is 16.
+  --initial-learning-rate FLOAT   Initial learning rate.                              Default is 0.01.
+  --minimal-learning-rate FLOAT   Final learning rate.                                Default is 0.001.
   --annealing-factor FLOAT        Annealing factor for learning rate.                 Default is 1.0.
   --lambd FLOAR                   Weight regularization penalty.                      Default is 2**-4.
   --cluster-number INT            Number of clusters.                                 Default is 20.
   --initial-gamma FLOAT           Initial clustering cost weight.                     Default is 0.1.
-  --regularization-noise          Gradient noise.                                     Default is  10**-8.
+  --regularization-noise FLOAT    Gradient noise.                                     Default is  10**-8.
 ```
 
 ### Examples
