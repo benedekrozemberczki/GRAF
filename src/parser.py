@@ -70,12 +70,12 @@ def parameter_parser():
     parser.add_argument('--initial-learning-rate',
                         type = float,
                         default = 0.01,
-	                help = 'Initial learning rate. Default is 0.001.')
+	                help = 'Initial learning rate. Default is 0.01.')
 
     parser.add_argument('--minimal-learning-rate',
                         type = float,
                         default = 0.001,
-	                help = 'Minimal learning rate. Default is 0.0001.')
+	                help = 'Minimal learning rate. Default is 0.001.')
 
     parser.add_argument('--annealing-factor',
                         type = float,
@@ -94,7 +94,7 @@ def parameter_parser():
 
     parser.add_argument('--cluster-number',
                         type = int,
-                        default = 30,
+                        default = 20,
 	                help = 'Number of clusters. Default is 20.')
 
     parser.add_argument('--target-weighting',
