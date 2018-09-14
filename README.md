@@ -3,6 +3,11 @@ Inner product graph factorization machine.
 <p align="justify">
 GRAF is a graph embedding algorithm which learns a clustering based on features extracted with an inner product graph factorization machine. The procedure places nodes in an abstract feature space where the inner product of node features reconstructs the neighbourhood overlap matrix. GRAF is a specific application of an inner product factorization machine. The implementation supports GPU use.
 </p>
+</p>
+<p align="center">
+  <img width="700" src="graf.jpeg">
+</p>
+
 
 This repository provides a reference implementation for GRAF as it is used as a benchmark in the paper:
 > GEMSEC: Graph Embedding with Self Clustering.
