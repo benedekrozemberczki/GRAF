@@ -5,7 +5,7 @@ GRAF is a graph embedding algorithm which learns a clustering based on features 
 </p>
 </p>
 <p align="center">
-  <img width="700" src="graf.jpeg">
+  <img width="700" src="plain.jpeg">
 </p>
 
 
