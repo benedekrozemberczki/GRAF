@@ -15,6 +15,15 @@ This repository provides a reference implementation for GRAF as it is used as a 
 > arXiv, 2018.
 >https://arxiv.org/abs/1802.03997
 
+### Citing
+
+If you find GRAF useful in your research, please consider citing the following paper:
+
+>@misc{rozemberczki2018GEMSEC,    
+  author={Benedek Rozemberczki and Ryan Davies and Rik Sarkar and Charles Sutton},    
+  title={GEMSEC: Graph Embedding with Self Clustering},   
+  year={2018},    
+  eprint={arXiv:1802.03997}}
 
 ### Requirements
 
@@ -65,18 +74,18 @@ Learning of the embedding is handled by the `src/factorizer.py` script which pro
 #### Model options
 
 ```
-  --epochs INT                    Number of epochs.                                   Default is 10.
-  --batch-size INT                Number of edges in batch.                           Default is 128.
-  --target-weighting STR          Target edge weight strategy.                        Default is `overlap`.
-  --regularization-weighting STR  Regularization weighing strategy.                   Default is `normalized_overlap`.
-  --dimensions INT                Number of dimensions.                               Default is 16.
-  --initial-learning-rate FLOAT   Initial learning rate.                              Default is 0.01.
-  --minimal-learning-rate FLOAT   Final learning rate.                                Default is 0.001.
-  --annealing-factor FLOAT        Annealing factor for learning rate.                 Default is 1.0.
-  --lambd FLOAR                   Weight regularization penalty.                      Default is 2**-4.
-  --cluster-number INT            Number of clusters.                                 Default is 20.
-  --initial-gamma FLOAT           Initial clustering cost weight.                     Default is 0.1.
-  --regularization-noise FLOAT    Gradient noise.                                     Default is 10**-8.
+  --epochs                      INT       Number of epochs.                       Default is 10.
+  --batch-size                  INT       Number of edges in batch.               Default is 128.
+  --target-weighting            STR       Target edge weight strategy.            Default is `overlap`.
+  --regularization-weighting    STR       Regularization weighing strategy.       Default is `normalized_overlap`.
+  --dimensions                  INT       Number of dimensions.                   Default is 16.
+  --initial-learning-rate       FLOAT     Initial learning rate.                  Default is 0.01.
+  --minimal-learning-rate       FLOAT     Final learning rate.                    Default is 0.001.
+  --annealing-factor            FLOAT     Annealing factor for learning rate.     Default is 1.0.
+  --lambd                       FLOAT     Weight regularization penalty.          Default is 2**-4.
+  --cluster-number              INT       Number of clusters.                     Default is 20.
+  --initial-gamma               FLOAT     Initial clustering cost weight.         Default is 0.1.
+  --regularization-noise        FLOAT     Gradient noise.                         Default is 10**-8.
 ```
 
 ### Examples
@@ -106,13 +115,3 @@ Creating a clustered embedding of the default dataset in 128 dimensions and 10 c
 ```
 python src/factorizer.py --dimensions 128 --cluster-number 10
 ```
-
-### Citing
-
-If you find GRAF useful in your research, please consider citing the following paper:
-
->@misc{rozemberczki2018GEMSEC,    
-  author={Benedek Rozemberczki and Ryan Davies and Rik Sarkar and Charles Sutton},    
-  title={GEMSEC: Graph Embedding with Self Clustering},   
-  year={2018},    
-  eprint={arXiv:1802.03997}}
