@@ -53,13 +53,13 @@ Learning of the embedding is handled by the `src/factorizer.py` script which pro
 #### Input and output options
 
 ```
-  --input STR                   Input graph path.                                 Default is `data/politician_edges.csv`.
-  --embedding-output STR        Embeddings path.                                  Default is `output/embeddings/politician_embedding.csv`.
-  --cluster-mean-output         Cluster centers path.                             Default is `output/cluster_means/politician_means.csv`.
-  --log-output STR              Log path.                                         Default is `output/logs/politician.log`.
-  --assignment-output STR       Node-cluster assignment dictionary path.          Default is `output/assignments/politician.json`.
-  --dump-matrices BOOL          Whether the trained model should be saved.        Default is `True`.
-  --model STR                   Model used.                                       Default is `GRAF`.
+  --input                STR       Input graph path.                                 Default is `data/politician_edges.csv`.
+  --embedding-output     STR       Embeddings path.                                  Default is `output/embeddings/politician_embedding.csv`.
+  --cluster-mean-output  STR       Cluster centers path.                             Default is `output/cluster_means/politician_means.csv`.
+  --log-output           STR       Log path.                                         Default is `output/logs/politician.log`.
+  --assignment-output    STR       Node-cluster assignment dictionary path.          Default is `output/assignments/politician.json`.
+  --dump-matrices        BOOL      Whether the trained model should be saved.        Default is `True`.
+  --model                STR       Model used.                                       Default is `GRAF`.
 ```
 
 #### Model options
