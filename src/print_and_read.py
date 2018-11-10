@@ -1,7 +1,19 @@
+import json
 import pandas as pd
 import networkx as nx
 from texttable import Texttable
-import json
+
+
+def args_printer(args):
+    """
+    Function to print the logs in a nice tabular format.
+    :param args: Parameters used for the model.
+    """
+    args = vars(args)
+    keys = sorted(args.keys())
+    tab = Texttable() 
+    tab.add_rows([["Parameter", "Value"]] +  [[k.replace("_"," ").capitalize(),args[k]] for k in keys])
+    print(tab.draw())
 
 def graph_reader(input_path):
     """
@@ -57,23 +69,22 @@ def tab_printer(log):
     """    
     t = Texttable() 
     t.add_rows([['Epoch', log["losses"][-1][0]]])
-    print t.draw()
+    print(t.draw())
 
     t = Texttable()
     t.add_rows([['Loss', round(log["losses"][-1][1],3)]])
-    print t.draw() 
+    print(t.draw())
 
     t = Texttable()
     t.add_rows([['Modularity', round(log["cluster_quality"][-1][1],3)]])
-    print t.draw()   
+    print(t.draw())   
 
 def epoch_printer(repetition):
     """
     Function to print the epoch number.
     """    
-    print("")
-    print("Epoch " + str(repetition+1) + ". initiated.")
-    print("")
+
+    print("\nEpoch " + str(repetition+1) + ". initiated.\n")
 
 def log_updater(log, repetition, average_loss, optimization_time, modularity_score):
     """ 

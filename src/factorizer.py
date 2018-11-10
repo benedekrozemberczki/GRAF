@@ -1,5 +1,5 @@
 from parser import parameter_parser
-from print_and_read import graph_reader
+from print_and_read import graph_reader, args_printer
 from model import GRAFCODEWithRegularization, GRAFCODE, GRAFWithRegularization, GRAF
 
 def create_and_run_model(args):
@@ -19,4 +19,5 @@ def create_and_run_model(args):
 
 if __name__ == "__main__":
     args = parameter_parser()
+    args_printer(args)
     create_and_run_model(args)

@@ -93,11 +93,11 @@ class GRAFCODEWithRegularization(Model):
         Method to generate left and right handside matrices, proper time index and overlap vector.
         """
 
-        left_nodes = np.array(map(lambda x: x[0], edges))
-        right_nodes = np.array(map(lambda x: x[1], edges))
+        left_nodes = np.array([edge[0] for edge in edges])
+        right_nodes = np.array([edge[1] for edge in edges])
 
-        targets = np.array(map(lambda x: self.targets[(x[0], x[1])], edges))
-        regularization_weight = np.array(map(lambda x: self.targets[(x[0], x[1])], edges))
+        targets = np.array([self.targets[(edge[0], edge[1])] for edge in edges])
+        regularization_weight = np.array([self.targets[(x[0], x[1])] for edge in edges])
 
         feed_dict = {self.factorization_layer.edge_indices_left: left_nodes,
                      self.factorization_layer.edge_indices_right: right_nodes,
@@ -125,7 +125,7 @@ class GRAFCODEWithRegularization(Model):
                 self.average_loss = 0
 
                 epoch_printer(repetition)
-                for i in tqdm(range(0,len(self.edges)/self.args.batch_size)):
+                for i in tqdm(range(int(len(self.edges)/self.args.batch_size))):
                     self.current_step = self.current_step + 1
                     self.current_gamma = gamma_incrementer(self.current_step, self.args.initial_gamma, self.current_gamma, self.true_step_size)
                     feed_dict = self.feed_dict_generator(self.edges[i*self.args.batch_size:(i+1)*self.args.batch_size], self.current_step, self.current_gamma)
@@ -189,10 +189,10 @@ class GRAFCODE(GRAFCODEWithRegularization):
         Method to generate left and right handside matrices, proper time index and overlap vector.
         """
 
-        left_nodes = np.array(map(lambda x: x[0], edges))
-        right_nodes = np.array(map(lambda x: x[1], edges))
+        left_nodes = np.array([edge[0] for edge in edges])
+        right_nodes = np.array([edge[1] for edge in edges])
 
-        targets = np.array(map(lambda x: self.targets[(x[0], x[1])], edges))
+        targets = np.array([self.targets[(edge[0], edge[1])] for edge in edges])
 
         feed_dict = {self.factorization_layer.edge_indices_left: left_nodes,
                      self.factorization_layer.edge_indices_right: right_nodes,
@@ -240,11 +240,11 @@ class GRAFWithRegularization(GRAFCODEWithRegularization):
         Method to generate left and right handside matrices, proper time index and overlap vector.
         """
 
-        left_nodes = np.array(map(lambda x: x[0], edges))
-        right_nodes = np.array(map(lambda x: x[1], edges))
+        left_nodes = np.array([edge[0] for edge in edges])
+        right_nodes = np.array([edge[1] for edge in edges])
 
-        targets = np.array(map(lambda x: self.targets[(x[0], x[1])], edges))
-        regularization_weight = np.array(map(lambda x: self.targets[(x[0], x[1])], edges))
+        targets = np.array([self.targets[(edge[0], edge[1])] for edge in edges])
+        regularization_weight = np.array([self.targets[(x[0], x[1])] for edge in edges])
 
         feed_dict = {self.factorization_layer.edge_indices_left: left_nodes,
                      self.factorization_layer.edge_indices_right: right_nodes,
@@ -292,11 +292,11 @@ class GRAF(GRAFWithRegularization):
         Method to generate left and right handside matrices, proper time index and overlap vector.
         """
 
-        left_nodes = np.array(map(lambda x: x[0], edges))
-        right_nodes = np.array(map(lambda x: x[1], edges))
+        left_nodes = np.array([edge[0] for edge in edges])
+        right_nodes = np.array([edge[1] for edge in edges])
 
-        targets = np.array(map(lambda x: self.targets[(x[0], x[1])], edges))
-        regularization_weight = np.array(map(lambda x: self.targets[(x[0], x[1])], edges))
+        targets = np.array([self.targets[(edge[0], edge[1])] for edge in edges])
+        regularization_weight = np.array([self.targets[(x[0], x[1])] for edge in edges])
 
         feed_dict = {self.factorization_layer.edge_indices_left: left_nodes,
                      self.factorization_layer.edge_indices_right: right_nodes,
