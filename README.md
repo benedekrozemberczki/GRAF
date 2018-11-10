@@ -27,16 +27,15 @@ If you find GRAF useful in your research, please consider citing the following p
 
 ### Requirements
 
-The codebase is implemented in Python 2.7.
-package versions used for development are just below.
+The codebase is implemented in Python 3.5.3. Package versions used for development are just below.
 ```
 networkx          1.11
-tqdm              4.19.5
-numpy             1.13.3
-pandas            0.20.3
-tensorflow-gpu    1.3.0
+tqdm              4.28.1
+numpy             1.15.4
+pandas            0.23.4
+tensorflow-gpu    1.12.1
 jsonschema        2.6.0
-texttable         1.2.1
+texttable         1.5.0
 python-louvain    0.11
 ```
 
