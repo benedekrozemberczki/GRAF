@@ -38,7 +38,7 @@ def json_dumper(data, path):
     """
     Function to dump the logs and assignments.
     """    
-    with open(path, 'w') as outfile:
+    with open(path, "w") as outfile:
         json.dump(data, outfile)
 
 def initiate_dump_grafcode(log, assignments, args, final_embeddings, c_means):
@@ -68,15 +68,15 @@ def tab_printer(log):
     Function to print the logs in a nice tabular format.
     """    
     t = Texttable() 
-    t.add_rows([['Epoch', log["losses"][-1][0]]])
+    t.add_rows([["Epoch", log["losses"][-1][0]]])
     print(t.draw())
 
     t = Texttable()
-    t.add_rows([['Loss', round(log["losses"][-1][1],3)]])
+    t.add_rows([["Loss", round(log["losses"][-1][1],3)]])
     print(t.draw())
 
     t = Texttable()
-    t.add_rows([['Modularity', round(log["cluster_quality"][-1][1],3)]])
+    t.add_rows([["Modularity", round(log["cluster_quality"][-1][1],3)]])
     print(t.draw())   
 
 def epoch_printer(repetition):

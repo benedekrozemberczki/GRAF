@@ -24,7 +24,7 @@ def overlap(g, node_1, node_2):
 
 def unit(g, node_1, node_2):
     """
-    Function to calculate the 'unit' weight.
+    Function to calculate the "unit" weight.
     """    
     return 1
 

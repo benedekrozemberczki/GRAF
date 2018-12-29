@@ -2,14 +2,10 @@ import random
 import numpy as np
 import math
 import time
-
 import networkx as nx
 import tensorflow as tf
-
 from tqdm import tqdm
-
 from layers import Factorization, Clustering, Regularization
-
 from calculation_helper import gamma_incrementer
 from calculation_helper import overlap_generator
 from calculation_helper import neural_modularity_calculator, classical_modularity_calculator
