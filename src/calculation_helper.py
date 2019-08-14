@@ -33,6 +33,10 @@ def overlap(g, node_1, node_2):
 def unit(g, node_1, node_2):
     """
     Function to calculate the "unit" weight.
+    :param g: NetworkX graph.
+    :param node_1: Node index 1.
+    :param node_2: Node index 2.
+    :return : Unit weight.
     """    
     return 1
 
