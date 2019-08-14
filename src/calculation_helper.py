@@ -10,6 +10,10 @@ from sklearn.cluster import KMeans
 def normalized_overlap(g, node_1, node_2):
     """
     Function to calculate the normalized neighborhood overlap.
+    :param g: NetworkX graph.
+    :param node_1: Node index 1.
+    :param node_2: Node index 2.
+    :return : A normalized neighbourhood overlap score.
     """    
     inter = len(set(nx.neighbors(g, node_1)).intersection(set(nx.neighbors(g, node_2))))
     unio = len(set(nx.neighbors(g, node_1)).union(set(nx.neighbors(g, node_2))))
@@ -18,6 +22,9 @@ def normalized_overlap(g, node_1, node_2):
 def overlap(g, node_1, node_2):
     """
     Function to calculate the neighborhood overlap.
+    :param g: NetworkX graph.
+    :param node_1: Node index 1.
+    :param node_2:
     """    
     inter = len(set(nx.neighbors(g, node_1)).intersection(set(nx.neighbors(g, node_2)))) + 1 
     return float(inter)
