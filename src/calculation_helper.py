@@ -74,7 +74,6 @@ def gamma_incrementer(step, gamma_0, current_gamma, num_steps):
         current_gamma = current_gamma * (10 **exponent)
     return current_gamma
 
-
 def neural_modularity_calculator(graph, embedding, means):
     """
     Function to calculate the GEMSEC cluster assignments.
