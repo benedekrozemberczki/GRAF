@@ -57,6 +57,7 @@ def overlap_generator(overlap_weighting, graph):
     Function to generate weight for all of the edges.
     :param overlap_weighting: Weighting method.
     :param graph: NetworkX graph object.
+    :return weights: Weight hash table.
     """
     if overlap_weighting == "normalized_overlap":
         overlap_weighter = normalized_overlap
