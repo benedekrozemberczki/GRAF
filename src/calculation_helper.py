@@ -24,7 +24,8 @@ def overlap(g, node_1, node_2):
     Function to calculate the neighborhood overlap.
     :param g: NetworkX graph.
     :param node_1: Node index 1.
-    :param node_2:
+    :param node_2: Node index 2.
+    :return : Overlap score.
     """    
     inter = len(set(nx.neighbors(g, node_1)).intersection(set(nx.neighbors(g, node_2)))) + 1 
     return float(inter)
