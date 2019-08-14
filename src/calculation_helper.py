@@ -43,6 +43,10 @@ def unit(g, node_1, node_2):
 def min_norm(g, node_1, node_2):
     """
     Function to calculate the minimum normalized neighborhood overlap.
+    :param g: NetworkX graph.
+    :param node_1: Node index 1.
+    :param node_2: Node index 2.
+    :return : Min set size.
     """    
     inter = len(set(nx.neighbors(g, node_1)).intersection(set(nx.neighbors(g, node_2))))
     min_norm = min(len(set(nx.neighbors(g, node_1))), len(set(nx.neighbors(g, node_2))))
@@ -51,6 +55,8 @@ def min_norm(g, node_1, node_2):
 def overlap_generator(overlap_weighting, graph):
     """
     Function to generate weight for all of the edges.
+    :param overlap_weighting: Weighting method.
+    :param graph: NetworkX graph object.
     """
     if overlap_weighting == "normalized_overlap":
         overlap_weighter = normalized_overlap
