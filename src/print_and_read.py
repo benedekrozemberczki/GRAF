@@ -3,7 +3,6 @@ import pandas as pd
 import networkx as nx
 from texttable import Texttable
 
-
 def args_printer(args):
     """
     Function to print the logs in a nice tabular format.
@@ -83,7 +82,6 @@ def epoch_printer(repetition):
     """
     Function to print the epoch number.
     """    
-
     print("\nEpoch " + str(repetition+1) + ". initiated.\n")
 
 def log_updater(log, repetition, average_loss, optimization_time, modularity_score):
