@@ -1,13 +1,13 @@
-import random
-import numpy as np
 import math
 import time
+import random
+import numpy as np
 import networkx as nx
-import tensorflow as tf
 from tqdm import tqdm
-from layers import Factorization, Clustering, Regularization
+import tensorflow as tf
 from calculation_helper import gamma_incrementer
 from calculation_helper import overlap_generator
+from layers import Factorization, Clustering, Regularization
 from calculation_helper import neural_modularity_calculator, classical_modularity_calculator
 from print_and_read import json_dumper, log_setup, initiate_dump_graf, initiate_dump_grafcode, tab_printer, epoch_printer, log_updater
 
@@ -15,7 +15,7 @@ class Model(object):
     """
     Abstract model class.
     """
-    def __init__(self,args,graph):
+    def __init__(self, args, graph):
         """
         Every model needs the same initialization -- args, graph.
         We delete the sampler object to save memory.
