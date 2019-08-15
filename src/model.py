@@ -31,7 +31,6 @@ class Model(object):
         self.edges = nx.edges(self.graph)
         self.build()
 
-
     def build(self):
         """
         Building the model.
