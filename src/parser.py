@@ -7,10 +7,6 @@ def parameter_parser():
     """
     parser = argparse.ArgumentParser(description = "Run GRAFCODE.")
 
-    #------------------------------------------------------------------
-    # Input and output file parameters.
-    #------------------------------------------------------------------
-
     parser.add_argument("--input",
                         nargs = "?",
                         default = "./data/politician_edges.csv",
@@ -45,10 +41,6 @@ def parameter_parser():
                         nargs = "?",
                         default = "GRAFCODE",
 	                help = "The model type.")
-
-    #------------------------------------------------------------------
-    # Model parameters.
-    #------------------------------------------------------------------
 
     parser.add_argument("--dimensions",
                         type = int,
