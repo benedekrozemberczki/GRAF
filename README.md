@@ -40,13 +40,13 @@ python-louvain    0.11
 ```
 
 ### Datasets
-
+<p align="justify">
 The code takes an input graph in a csv file. Every row indicates an edge between two nodes separated by a comma. The first row is a header. Nodes should be indexed starting with 0. A sample graph for the `Facebook Politicians` dataset is included in the  `data/` directory.
-
+</p>
 ### Logging
-
+<p align="justify">
 The models are defined in a way that parameter settings and cluster quality is logged in every single epoch. Specifically we log the followings:
-
+</p>
 ```
 1. Hyperparameter settings.     We save each hyperparameter used in the experiment.
 2. Cost per epoch.              Reconstruction cost is stored depending on the model type.
@@ -88,11 +88,12 @@ Learning of the embedding is handled by the `src/factorizer.py` script which pro
 ```
 
 ### Examples
-
+<p align="justify">
 The following commands learn a graph embedding and cluster center and writes them to disk. The node representations are ordered by the ID.
-
+</p>
+<p align="justify">
 Creating a GRAF embedding of the default dataset with the default hyperparameter settings. Saving the embedding, cluster centres and the log file at the default path.
-
+</p>
 ```
 python src/factorizer.py
 ```
