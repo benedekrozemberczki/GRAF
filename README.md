@@ -1,4 +1,4 @@
-# GRAF ![GitHub stars](https://img.shields.io/github/stars/benedekrozemberczki/GRAF.svg?style=plastic) ![GitHub forks](https://img.shields.io/github/forks/benedekrozemberczki/GRAF.svg?color=blue&style=plastic) ![License](https://img.shields.io/github/license/benedekrozemberczki/GRAF.svg?color=blue&style=plastic)
+# GRAF ![License](https://img.shields.io/github/license/benedekrozemberczki/GRAF.svg?color=blue&style=plastic)
 Inner product graph factorization machine.
 <p align="justify">
 GRAF is a graph embedding algorithm which learns a clustering based on features extracted with an inner product graph factorization machine. The procedure places nodes in an abstract feature space where the inner product of node features reconstructs the neighbourhood overlap matrix. GRAF is a specific application of an inner product factorization machine. The implementation supports GPU use.
