@@ -96,6 +96,7 @@ The following commands learn a graph embedding and cluster center and writes the
 <p align="justify">
 Creating a GRAF embedding of the default dataset with the default hyperparameter settings. Saving the embedding, cluster centres and the log file at the default path.
 </p>
+
 ```
 python src/factorizer.py
 ```
