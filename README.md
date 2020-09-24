@@ -2,9 +2,7 @@ GRAF
 =============
 ![License](https://img.shields.io/github/license/benedekrozemberczki/GRAF.svg?color=blue&style=plastic) [![codebeat badge](https://codebeat.co/badges/84fde798-824b-4585-b633-bf9dbc2ca83e)](https://codebeat.co/projects/github-com-benedekrozemberczki-graf-master) 
 <p align="justify">
-
 GRAF is a graph embedding algorithm which learns a clustering based on features extracted with an inner product graph factorization machine. The procedure places nodes in an abstract feature space where the inner product of node features reconstructs the neighbourhood overlap matrix. GRAF is a specific application of an inner product factorization machine. The implementation supports GPU use.
-</p>
 </p>
 <p align="center">
   <img width="700" src="plain.jpeg">
@@ -12,7 +10,7 @@ GRAF is a graph embedding algorithm which learns a clustering based on features 
 
 
 This repository provides a reference implementation for GRAF as it is used as a benchmark in the paper:
-> GEMSEC: Graph Embedding with Self Clustering.
+> **GEMSEC: Graph Embedding with Self Clustering.**
 > [Benedek Rozemberczki](http://homepages.inf.ed.ac.uk/s1668259/), [Ryan Davies](https://www.inf.ed.ac.uk/people/students/Ryan_Davies.html), [Rik Sarkar](https://homepages.inf.ed.ac.uk/rsarkar/) and [Charles Sutton](http://homepages.inf.ed.ac.uk/csutton/) .
 > arXiv, 2018.
 >https://arxiv.org/abs/1802.03997
