@@ -1,6 +1,6 @@
 GRAF
 =============
-![License](https://img.shields.io/github/license/benedekrozemberczki/GRAF.svg?color=blue&style=plastic) [![codebeat badge](https://codebeat.co/badges/84fde798-824b-4585-b633-bf9dbc2ca83e)](https://codebeat.co/projects/github-com-benedekrozemberczki-graf-master) [![repo size](https://img.shields.io/github/repo-size/benedekrozemberczki/ClusterGCN.svg)](https://github.com/benedekrozemberczki/ClusterGCN/archive/master.zip)
+[![codebeat badge](https://codebeat.co/badges/84fde798-824b-4585-b633-bf9dbc2ca83e)](https://codebeat.co/projects/github-com-benedekrozemberczki-graf-master) [![repo size](https://img.shields.io/github/repo-size/benedekrozemberczki/ClusterGCN.svg)](https://github.com/benedekrozemberczki/ClusterGCN/archive/master.zip)
 <p align="justify">
 GRAF is a graph embedding algorithm which learns a clustering based on features extracted with an inner product graph factorization machine. The procedure places nodes in an abstract feature space where the inner product of node features reconstructs the neighbourhood overlap matrix. GRAF is a specific application of an inner product factorization machine. The implementation supports GPU use.
 </p>
@@ -118,3 +118,8 @@ Creating a clustered embedding of the default dataset in 128 dimensions and 10 c
 ```
 python src/factorizer.py --dimensions 128 --cluster-number 10
 ```
+--------------------------------------------------------------------------------
+
+**License**
+
+- [GNU License](https://github.com/benedekrozemberczki/GRAF/blob/master/LICENSE)
