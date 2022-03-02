@@ -1,6 +1,6 @@
 GRAF
 ======================
-[![codebeat badge](https://codebeat.co/badges/84fde798-824b-4585-b633-bf9dbc2ca83e)](https://codebeat.co/projects/github-com-benedekrozemberczki-graf-master) [![repo size](https://img.shields.io/github/repo-size/benedekrozemberczki/ClusterGCN.svg)](https://github.com/benedekrozemberczki/ClusterGCN/archive/master.zip)⠀[![benedekrozemberczki](https://img.shields.io/twitter/follow/benrozemberczki?style=social&logo=twitter)](https://twitter.com/intent/follow?screen_name=benrozemberczki)⠀
+[![codebeat badge](https://codebeat.co/badges/84fde798-824b-4585-b633-bf9dbc2ca83e)](https://codebeat.co/projects/github-com-benedekrozemberczki-graf-master) [![repo size](https://img.shields.io/github/repo-size/benedekrozemberczki/ClusterGCN.svg)](https://github.com/benedekrozemberczki/ClusterGCN/archive/master.zip) [![benedekrozemberczki](https://img.shields.io/twitter/follow/benrozemberczki?style=social&logo=twitter)](https://twitter.com/intent/follow?screen_name=benrozemberczki)
 <p align="justify">
 GRAF is a graph embedding algorithm which learns a clustering based on features extracted with an inner product graph factorization machine. The procedure places nodes in an abstract feature space where the inner product of node features reconstructs the neighbourhood overlap matrix. GRAF is a specific application of an inner product factorization machine. The implementation supports GPU use.
 </p>
