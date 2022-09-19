@@ -118,10 +118,10 @@ Creating a clustered embedding of the default dataset in 128 dimensions and 10 c
 ```
 python src/factorizer.py --dimensions 128 --cluster-number 10
 ```
---------------------------------------------------------------------------------
+------------------------------------------------------------------------------
 
 **License**
 
 - [GNU License](https://github.com/benedekrozemberczki/GRAF/blob/master/LICENSE)
 
---------------------------------------------------------------------------------
+------------------------------------------------------------------------------
